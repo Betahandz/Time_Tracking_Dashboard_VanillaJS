@@ -1,12 +1,17 @@
-/* @font-face {
-    font-family: ;
-    src: url();
+@font-face {
+    font-family: rubikBold;
+    src: url(./fonts/Rubik-Bold.ttf);
 }
 
 @font-face {
-    font-family: ;
-    src: url();
-} */
+    font-family: rubikReg;
+    src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: rubikLight;
+    src: url(./fonts/Rubik-Light.ttf);
+}
 
 :root {
     /* paint */
@@ -19,14 +24,53 @@
     --Soft-orange-self-care: hsl(43, 84%, 65%);
     --Very-dark-blue: hsl(226, 43%, 10%);
     --Dark-blue: hsl(235, 46%, 20%);
+    --Dark-blue-trans: hsl(236, 42%, 30%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
-    /* border radius */
-    /* --brad: 20px; */
     /* typography */
+
     /* padding */
     --pad: 20px;
 }
+
+/* FONT FAMILY UNIVERSAL CLASS */
+.bold {
+    font-family: rubikBold;
+}
+
+.reg {
+    font-family: rubikReg;
+}
+
+.light {
+    font-family: rubikLight;
+}
+
+/* FONT COLOR */
+.pale {
+    color: var(--Pale-Blue)
+}
+
+.bright {
+    color: white;
+}
+
+/* FONT SIZES */
+.big {
+    font-size: 25px;
+}
+
+.medium {
+    font-size: 16px;
+}
+
+.small {
+    font-size: 18px;
+}
+
+
+
+/**********************************************/
 
 * {
     margin: 0;
@@ -46,7 +90,7 @@ body {
 
 .display-board {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     min-height: 500px;
 }
 
@@ -69,6 +113,15 @@ body {
     aspect-ratio: 1/1;
     border: solid 2px white;
     border-radius: 50%;
+}
+
+.details {
+
+}
+
+.name {
+    letter-spacing: 2px;
+    font-weight: 200;
 }
 
 .period {
@@ -145,7 +198,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
+
+.info:hover {
+    background-color: var(--Dark-blue-trans);
+}
+
+.info.activeInfo {
+    background-color: var(--Dark-blue);
+}
+
 
 .head {
     display: flex;
@@ -153,14 +216,15 @@ body {
     justify-content: space-between;
 }
 
-.title {
-    color: white;
+.ellipsis {
+    cursor: pointer;
 }
 
 .info-detail {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .hours {
@@ -184,4 +248,112 @@ body {
 
 .linkage a:hover {
     color: var(--Soft-blue-play)
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+    body {
+        /* background-color: red; */
+        max-height: 100vh;
+    }
+    
+    .display-board {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 500px;
+        width: 90%;
+        margin: auto;
+        /* border: solid 2px white; */
+    }
+
+    .left, .right {
+        min-height: 500px;
+    }
+
+    .left {
+        width: 30%;
+    }
+
+    .profile {
+        height: 350px;
+        align-items: start;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .period {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 150px;
+        align-items: start;
+    }
+
+    .right {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
+        gap: 5px;
+        /* justify-items: start; */
+        align-items: stretch;
+    }
+
+    .activity {
+        margin-top: unset;
+        /* height: 250px; */
+        display: flex;
+        align-items: end;
+    }
+
+    .activity-icon {
+        top: -5px
+    }
+
+    .info {
+        height: 80%;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: unset;
+    }
+
+    .info-detail {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .big {
+        font-size: 24px;
+    } */
+
+    .medium {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .display-board {
+        width: 80%;
+        gap: 20px;
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    .right {
+        gap: 10px;
+    }
+
+    .big {
+        font-size: 40px;
+    }
+
+    .medium {
+        font-size: 15px;
+    }
 }

@@ -3,11 +3,11 @@ import data from "./data.js";
 import classActive from "./classActive.js";
 import Activity from "./activity.js";
 import { timing } from "./classActive.js";
+import ellipsis from "./ellipsis.js";
 
 
 // SELECTED ELEMENTS
 const time = [...document.querySelectorAll(".time")];
-
 
 
 
@@ -20,4 +20,5 @@ time.forEach(btn => classActive(btn, time))
 
 window.addEventListener("DOMContentLoaded", () => {
     Activity(data, timing);
+    ellipsis();
 })

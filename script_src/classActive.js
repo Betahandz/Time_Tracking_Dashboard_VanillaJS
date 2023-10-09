@@ -1,6 +1,7 @@
 // IMPORTS
 import data from "./data.js";
 import Activity from "./activity.js";
+import ellipsis from "./ellipsis.js";
 
 // CONDITIONALS
 let timing = 'w';
@@ -12,6 +13,7 @@ const classActive = (btn, groupBtn) => {
         currentBtn.classList.add("active");
         timing = e.currentTarget.dataset.id;
         Activity(data, timing);
+        ellipsis();
     })
 }
 
