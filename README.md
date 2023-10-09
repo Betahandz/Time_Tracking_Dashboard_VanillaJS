@@ -12,7 +12,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Dee-Maria/Time_Tracking_Dashboard_VanillaJS)
+- Live Site URL: [Add live site URL here](https://dee-maria.github.io/Time_Tracking_Dashboard_VanillaJS/)
 
 ## My process
 - Creation of the skeleton/structure (HTML).
@@ -57,5 +56,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Da-Hubb](https://www.frontendmentor.io/profile/Da-Hubb)
